@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="http://muki.webfactional.com/djstatic/css/style.css">
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+</head>
+
+<body>
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Outfit7 logger</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="/diary/">Diary</a>
+          <!-- <a class="mdl-navigation__link" href="/napake/">Logične napake</a> -->
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Outfit7 logger</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/diary/">Diary</a>
+        <!-- <a class="mdl-navigation__link" href="/napake/">Logične napake</a> -->
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+
+      <div class="page-content">
+
+        <div class="mdl-grid">
+
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--1-col-tablet"></div>
+
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--12-col-phone">
+
+            <h4>Please log in below. :)</h4>
+
+            <a href="{% url 'social:begin' 'facebook' %}" class="mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Log in with Facebook</a>
+            <br>
+            <br>
+            <a href="{% url 'social:begin' 'twitter' %}" class="mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Log in with Twitter</a>
+            <br>
+            <br>
+            <a href="{% url 'social:begin' 'google-oauth2' %}" class="mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Log in with Google</a>
+
+          </div>
+
+        </div>
+        <!-- end mdl-grid -->
+
+      </div>
+      <!-- end page-content -->
+    </main>
+  </div>
+
+
+</body>
+
+</html>
