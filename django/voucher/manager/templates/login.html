@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h4>Please log in below. :)</h4>
+
+  <a href="{% url 'social:begin' 'facebook' %}" class="mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Log in with Facebook</a>
+  <br>
+  <br>
+  <a href="{% url 'social:begin' 'twitter' %}" class="mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Log in with Twitter</a>
+  <br>
+  <br>
+  <a href="{% url 'social:begin' 'google-oauth2' %}" class="mdl-button--colored mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Log in with Google</a>
+
+{% endblock %}
